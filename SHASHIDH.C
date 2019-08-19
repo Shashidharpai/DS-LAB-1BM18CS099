@@ -25,7 +25,8 @@ switch(choice)
     {
     printf("displaying the stack\n");
     for(i=0;i<=top;i++)
-    {printf("%d",stack[i]);}
+    {printf("%d",stack[i]);
+    printf("\n");}
     }
     break;
 }
