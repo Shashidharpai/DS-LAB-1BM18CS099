@@ -124,7 +124,22 @@ Node concatinate(Node first1,Node first2)
 		
 		}
 	}
-    
+ Node reverse(Node first)
+{
+	ode curr = first;
+	
+	ode prev = NULL;
+	ode link=NULL;
+	while(curr!=NULL)
+	{
+		link =curr->next;
+		curr->next = prev;
+		prev = curr;
+		curr = link;
+	}
+	first = prev;
+	return first;
+}
 
 void display(Node first)
 {
@@ -169,7 +184,7 @@ int main()
  {
  case 1: printf("Enter the element to be inserted: ");
  scanf("%d",&value);
- first1=insert_front(first1,value);
+ first1=insert_front(first1 ,value);
  break;
  case 2: printf("Enter the element to be inserted: ");
  scanf("%d",&value);
